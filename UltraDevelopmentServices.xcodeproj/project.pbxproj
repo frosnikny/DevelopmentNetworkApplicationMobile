@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		54F9FCCB2B1F76DE0000ADC5 /* UltraDevelopmentServicesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F9FCCA2B1F76DE0000ADC5 /* UltraDevelopmentServicesApp.swift */; };
-<<<<<<< HEAD
 		54F9FCCD2B1F76DE0000ADC5 /* DevelopmentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F9FCCC2B1F76DE0000ADC5 /* DevelopmentList.swift */; };
 		54F9FCCF2B1F76DF0000ADC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54F9FCCE2B1F76DF0000ADC5 /* Assets.xcassets */; };
 		54F9FCD22B1F76DF0000ADC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54F9FCD12B1F76DF0000ADC5 /* Preview Assets.xcassets */; };
@@ -22,17 +21,11 @@
 		54F9FCF62B1F99CF0000ADC5 /* Double+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F9FCF52B1F99CF0000ADC5 /* Double+Extenstions.swift */; };
 		54F9FCF82B1F99E00000ADC5 /* String+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F9FCF72B1F99E00000ADC5 /* String+Extenstions.swift */; };
 		54F9FCFA2B1FA0FC0000ADC5 /* DevelopmentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F9FCF92B1FA0FC0000ADC5 /* DevelopmentEntity.swift */; };
-=======
-		54F9FCCD2B1F76DE0000ADC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F9FCCC2B1F76DE0000ADC5 /* ContentView.swift */; };
-		54F9FCCF2B1F76DF0000ADC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54F9FCCE2B1F76DF0000ADC5 /* Assets.xcassets */; };
-		54F9FCD22B1F76DF0000ADC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54F9FCD12B1F76DF0000ADC5 /* Preview Assets.xcassets */; };
->>>>>>> main
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		54F9FCC72B1F76DE0000ADC5 /* UltraDevelopmentServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltraDevelopmentServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F9FCCA2B1F76DE0000ADC5 /* UltraDevelopmentServicesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltraDevelopmentServicesApp.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		54F9FCCC2B1F76DE0000ADC5 /* DevelopmentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentList.swift; sourceTree = "<group>"; };
 		54F9FCCE2B1F76DF0000ADC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54F9FCD12B1F76DF0000ADC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -46,11 +39,6 @@
 		54F9FCF52B1F99CF0000ADC5 /* Double+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extenstions.swift"; sourceTree = "<group>"; };
 		54F9FCF72B1F99E00000ADC5 /* String+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extenstions.swift"; sourceTree = "<group>"; };
 		54F9FCF92B1FA0FC0000ADC5 /* DevelopmentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentEntity.swift; sourceTree = "<group>"; };
-=======
-		54F9FCCC2B1F76DE0000ADC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		54F9FCCE2B1F76DF0000ADC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		54F9FCD12B1F76DF0000ADC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
->>>>>>> main
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,17 +71,11 @@
 		54F9FCC92B1F76DE0000ADC5 /* UltraDevelopmentServices */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				54F9FCFB2B1FAA800000ADC5 /* Entities */,
 				54F9FCEF2B1F99390000ADC5 /* Services */,
 				54F9FCD82B1F76EB0000ADC5 /* Application */,
 				54F9FCD92B1F76F90000ADC5 /* Extenstions */,
 				54F9FCDA2B1F77030000ADC5 /* Screens */,
-=======
-				54F9FCCA2B1F76DE0000ADC5 /* UltraDevelopmentServicesApp.swift */,
-				54F9FCCC2B1F76DE0000ADC5 /* ContentView.swift */,
-				54F9FCCE2B1F76DF0000ADC5 /* Assets.xcassets */,
->>>>>>> main
 				54F9FCD02B1F76DF0000ADC5 /* Preview Content */,
 			);
 			path = UltraDevelopmentServices;
@@ -107,7 +89,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
 		54F9FCD82B1F76EB0000ADC5 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,8 +201,6 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-=======
->>>>>>> main
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -292,7 +271,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				54F9FCF22B1F99510000ADC5 /* APIManager.swift in Sources */,
 				54F9FCCD2B1F76DE0000ADC5 /* DevelopmentList.swift in Sources */,
 				54F9FCF82B1F99E00000ADC5 /* String+Extenstions.swift in Sources */,
@@ -305,10 +283,6 @@
 				54F9FCE82B1F78A30000ADC5 /* MainViewModel.swift in Sources */,
 				54F9FCF42B1F995B0000ADC5 /* APIErrors.swift in Sources */,
 				54F9FCF62B1F99CF0000ADC5 /* Double+Extenstions.swift in Sources */,
-=======
-				54F9FCCD2B1F76DE0000ADC5 /* ContentView.swift in Sources */,
-				54F9FCCB2B1F76DE0000ADC5 /* UltraDevelopmentServicesApp.swift in Sources */,
->>>>>>> main
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
