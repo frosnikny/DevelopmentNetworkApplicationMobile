@@ -29,12 +29,31 @@ extension DevelopmentModel {
             
             // Связывание опциональной строки с URL
             if let imageURLString = imageURLString {
-                self.imageURL = URL(string: "http://" + imageURLString)
+                let imageURLStringHost = imageURLString.replacingOccurrences(of: "localhost", with: host)
+                self.imageURL = URL(string: "http://" + imageURLStringHost)
             } else {
                 self.imageURL = nil // В случае, если строка imageURLString пуста
             }
         }
 }
+
+extension DevelopmentModel {
+    var mapper: DevelopmentService {
+            let imageURLStringHost = imageURL?.absoluteString.replacingOccurrences(of: "localhost", with: host)
+        
+            return DevelopmentService(
+                uuid: dataId ?? "00000000-0000-0000-0000-000000000000",
+                Title: title,
+                Description: description,
+                image_url: imageURLStringHost,
+                Price: price,
+                RecordStatus: 0,
+                Technology: technology,
+                DetailedPrice: detailedPrice
+            )
+        }
+}
+
 
 // MARK: - Mock data
 

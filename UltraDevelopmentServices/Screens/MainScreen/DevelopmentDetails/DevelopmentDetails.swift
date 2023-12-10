@@ -7,9 +7,15 @@
 
 import SwiftUI
 
+func formatPrice(_ price: Double) -> String {
+    let numberFormatter = NumberFormatter()
+    numberFormatter.numberStyle = .decimal
+    return numberFormatter.string(from: NSNumber(value: price)) ?? "\(price)"
+}
+
 struct DevelopmentDetails: View {
     @EnvironmentObject var viewModel: MainViewModel
-    var developmentService: DevelopmentModel!
+    var developmentServiceId: String?
 
     var body: some View {
         GeometryReader {
@@ -28,13 +34,22 @@ struct DevelopmentDetails: View {
         .navigationBarTitle("", displayMode: .inline)
         .colorScheme(.dark)
         .background(Color.appBackground)
+        .onAppear(perform: fetchDetails)
     }
 }
 
-func formatPrice(_ price: Double) -> String {
-    let numberFormatter = NumberFormatter()
-    numberFormatter.numberStyle = .decimal
-    return numberFormatter.string(from: NSNumber(value: price)) ?? "\(price)"
+// MARK: - Network
+
+private extension DevelopmentDetails {
+
+    func fetchDetails() {
+        viewModel.getDetails(devDataId: developmentServiceId ?? "") { error in
+            if let error {
+                print(error.localizedDescription)
+                viewModel.developmentService = .mockData
+            }
+        }
+    }
 }
 
 // MARK: - SongDetails
@@ -46,7 +61,7 @@ private extension DevelopmentDetails {
     /// - Parameter size: размер фото
     /// - Returns: кастомную фотку
     func ImageView(_ size: CGSize) -> some View {
-        AsyncImage(url: developmentService.imageURL) { img in
+        AsyncImage(url: viewModel.developmentService.imageURL) { img in
             img
                 .resizable()
                 .aspectRatio(contentMode: .fill)
@@ -66,16 +81,16 @@ private extension DevelopmentDetails {
     /// Наше тело со всей текстой информацией
     var DevelopmentTextInfo: some View {
         VStack {
-            Text(developmentService.title ?? "Название не указано")
+            Text(viewModel.developmentService.title ?? "Название не указано")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.system(size: 22, weight: .semibold, design: .rounded))
 
-            Text(developmentService.description ?? "Описание не задано")
+            Text(viewModel.developmentService.description ?? "Описание не задано")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.system(size: 18, weight: .semibold, design: .rounded))
                 .foregroundStyle(.secondary)
             
-            if let collectionTechnology = developmentService.technology {
+            if let collectionTechnology = viewModel.developmentService.technology {
                 HStack {
                     Text("Исользуемые технологии: \(collectionTechnology)")
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -91,7 +106,7 @@ private extension DevelopmentDetails {
                 Spacer()
 
                 /// Если стоимость задана, то выводим её, иначе текст `не задана`
-                if let collectionPrice = developmentService.price {
+                if let collectionPrice = viewModel.developmentService.price {
                     Text("от " + formatPrice(collectionPrice) + " ₽")
                         .font(.system(size: 25, weight: .bold, design: .rounded))
                         .frame(maxWidth: .infinity, alignment: .trailing)
@@ -110,7 +125,7 @@ private extension DevelopmentDetails {
                 Spacer()
 
                 /// Если детальная стоимость задана, то выводим её, иначе текст `не задано`
-                if let collectionDetailedCost = developmentService.detailedPrice {
+                if let collectionDetailedCost = viewModel.developmentService.detailedPrice {
                     Text(formatPrice(collectionDetailedCost) + " ₽")
                         .font(.system(size: 20, weight: .bold, design: .rounded))
                         .frame(maxWidth: .infinity, alignment: .trailing)
@@ -127,9 +142,9 @@ private extension DevelopmentDetails {
 
 // MARK: - Preview
 
-#Preview {
-    NavigationStack {
-        DevelopmentDetails(developmentService: .mockData)
-    }
-    .environmentObject(MainViewModel())
-}
+//#Preview {
+//    NavigationStack {
+//        DevelopmentDetails(developmentService: .mockData)
+//    }
+//    .environmentObject(MainViewModel())
+//}

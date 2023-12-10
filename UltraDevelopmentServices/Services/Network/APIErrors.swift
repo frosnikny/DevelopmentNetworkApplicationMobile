@@ -14,6 +14,7 @@ enum APIError: LocalizedError {
     case error(Error)
     case responseIsNil
     case incorrectlyURL
+    case jsonEncodingError
 
     var errorDescription: String {
         switch self {
@@ -23,6 +24,7 @@ enum APIError: LocalizedError {
         case .badStatusCode(let code): return "Bad statuc code: \(code)"
         case .error(let error): return error.localizedDescription
         case .incorrectlyURL: return "Bad url provided"
+        case .jsonEncodingError: return "Json Encoding Error"
         }
     }
 }
